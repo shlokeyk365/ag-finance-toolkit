@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ag-finance-toolkit"
+version = "0.1.0"
+description = "Modular Python toolkit for agricultural financial modeling."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [
+  { name = "ag-finance-toolkit contributors" }
+]
+dependencies = [
+  "pydantic>=2,<3",
+  "numpy>=1.24,<3",
+  "scipy>=1.10,<2",
+  "pandas>=2,<3",
+  "requests>=2.31,<3",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8,<9",
+]
+examples = [
+  "jupyter>=1,<2",
+  "matplotlib>=3.8,<4",
+]
+
+[tool.setuptools.packages.find]
+include = ["agfin*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
