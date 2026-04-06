@@ -5,6 +5,15 @@ the toolkit. Connector modules are intentionally focused on request handling,
 response normalization, and clear error behavior.
 """
 
+from agfin.connectors.nass import (
+    NassConfigurationError,
+    NassError,
+    NassNoDataError,
+    NassResponseError,
+    get_crop_price,
+    get_crop_yield,
+    get_production_data,
+)
 from agfin.connectors.weather import (
     get_precipitation_series,
     get_temperature_series,
@@ -12,6 +21,13 @@ from agfin.connectors.weather import (
 )
 
 __all__ = [
+    "NassConfigurationError",
+    "NassError",
+    "NassNoDataError",
+    "NassResponseError",
+    "get_crop_price",
+    "get_crop_yield",
+    "get_production_data",
     "get_weather_history",
     "get_precipitation_series",
     "get_temperature_series",
