@@ -32,7 +32,7 @@ class RiskResults(BaseModel):
         if not self.p10_income <= self.p50_income <= self.p90_income:
             raise ValueError("Income percentiles must satisfy p10 <= p50 <= p90")
 
-        if self.p10_dscr > self.mean_dscr:
+        if self.p10_dscr - self.mean_dscr > 1e-9:
             raise ValueError("p10_dscr cannot exceed mean_dscr")
 
         return self
