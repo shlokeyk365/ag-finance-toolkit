@@ -26,9 +26,9 @@ Implemented today:
 - `agfin.risk.simulate_farm_risk(...)` for vectorized Monte Carlo risk summaries
 - automated test coverage across schemas, metrics, connectors, and risk
 
-Still lightweight:
+Also included:
 
-- the example notebook is not yet the polished end-to-end walkthrough described in the planning docs
+- a polished end-to-end walkthrough notebook in `examples/farm_risk_demo.ipynb`
 
 ## Install
 

@@ -110,5 +110,5 @@ def test_simulate_farm_risk_rejects_invalid_parameters(kwargs: dict, message: st
 def test_simulate_farm_risk_requires_non_zero_debt_service() -> None:
     farm = make_sample_farm(debt_obligations=0.0)
 
-    with pytest.raises(ValueError, match="farm.debt_obligations must be non-zero"):
+    with pytest.raises(ValueError, match=r"farm\.debt_obligations must be non-zero"):
         simulate_farm_risk(farm)
